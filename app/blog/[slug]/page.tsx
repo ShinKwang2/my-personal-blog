@@ -56,7 +56,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 const author = {
   name: 'John Doe',
   bio: 'A passionate writer and developer.',
-  avatarUrl: '/images/avatar.png',
+  avatarUrl: '/profile.svg',
 }
 
 export default async function Blog({ params }: { params: Promise<{ slug: string }> }) {

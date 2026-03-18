@@ -1,5 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
-  <rect width="128" height="128" rx="64" fill="#e5e5e5"/>
-  <circle cx="64" cy="50" r="22" fill="#a3a3a3"/>
-  <ellipse cx="64" cy="110" rx="36" ry="30" fill="#a3a3a3"/>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.25)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="64" fill="url(#bg)"/>
+  <rect width="128" height="128" rx="64" fill="url(#shine)"/>
+  <circle cx="64" cy="48" r="20" fill="rgba(255,255,255,0.9)"/>
+  <ellipse cx="64" cy="105" rx="32" ry="26" fill="rgba(255,255,255,0.9)"/>
+  <circle cx="64" cy="48" r="16" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
 </svg>
