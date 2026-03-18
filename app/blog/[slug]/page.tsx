@@ -53,6 +53,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
 }
 
+const author = {
+  name: 'John Doe',
+  bio: 'A passionate writer and developer.',
+  avatarUrl: '/images/avatar.png',
+}
+
 export default async function Blog({ params }: { params: Promise<{ slug: string }> }) {
   let { slug } = await params
   let post = getBlogPosts().find((post) => post.slug === slug)
@@ -80,7 +86,7 @@ export default async function Blog({ params }: { params: Promise<{ slug: string 
             url: `${baseUrl}/blog/${post.slug}`,
             author: {
               '@type': 'Person',
-              name: 'My Portfolio',
+              name: author.name,
             },
           }),
         }}
@@ -96,13 +102,7 @@ export default async function Blog({ params }: { params: Promise<{ slug: string 
       <article className="prose">
         <CustomMDX source={post.content} />
       </article>
-      <AuthorProfile
-        author={{
-          name: 'John Doe',
-          bio: 'A passionate writer and developer.',
-          avatarUrl: '/images/avatar.png',
-        }}
-      />
+      <AuthorProfile author={author} />
     </section>
   )
 }
