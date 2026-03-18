@@ -57,6 +57,10 @@ const author = {
   name: 'John Doe',
   bio: 'A passionate writer and developer.',
   avatarUrl: '/profile.svg',
+  socialLinks: [
+    { platform: 'github' as const, url: 'https://github.com/ShinKwang2' },
+    { platform: 'x' as const, url: 'https://x.com/' },
+  ],
 }
 
 export default async function Blog({ params }: { params: Promise<{ slug: string }> }) {
