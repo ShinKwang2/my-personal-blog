@@ -96,7 +96,13 @@ export default async function Blog({ params }: { params: Promise<{ slug: string 
       <article className="prose">
         <CustomMDX source={post.content} />
       </article>
-      <AuthorProfile />
+      <AuthorProfile
+        author={{
+          name: 'John Doe',
+          bio: 'A passionate writer and developer.',
+          avatarUrl: '/images/avatar.png',
+        }}
+      />
     </section>
   )
 }
