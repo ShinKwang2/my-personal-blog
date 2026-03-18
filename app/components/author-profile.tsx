@@ -4,7 +4,7 @@ export function AuthorProfile() {
       <hr className="my-8 border-neutral-200 dark:border-neutral-700" />
       <div className="flex items-start gap-4">
         <img
-          src="/profile.png"
+          src="/profile.svg"
           alt="작가 프로필 사진"
           className="w-16 h-16 rounded-full object-cover"
         />
